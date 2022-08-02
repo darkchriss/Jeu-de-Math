@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Jeu_de_Math
 {
@@ -22,7 +18,7 @@ namespace Jeu_de_Math
         private static int GetOperateur()
         {
             Random random = new Random();
-            int operateur = random.Next(1,4);
+            int operateur = random.Next(1, 4);
 
             if (operateur == 1)
             {
@@ -35,7 +31,8 @@ namespace Jeu_de_Math
             return (int)OPERATEUR.SOUSTRACTION;
         }
 
-        private static bool DemanderOperation() {
+        private static bool DemanderOperation()
+        {
             Random random = new Random();
             int chiffreA = random.Next(VAL_MIN, VAL_MAX);
             int chiffreB = random.Next(VAL_MIN, VAL_MAX);
@@ -156,10 +153,11 @@ namespace Jeu_de_Math
                 {
                     mauvaiseReponse++;
                 }
-                
+
                 int Resultat = bonneReponse - mauvaiseReponse;
                 if (question == 5)
-                {   Console.WriteLine("");
+                {
+                    Console.WriteLine("");
                     if (Resultat == 5)
                     {
                         Console.WriteLine("Bravo ! Vous avez répondu correctement à toutes les questions.");
@@ -173,7 +171,7 @@ namespace Jeu_de_Math
                         Console.WriteLine("Peut mieux faire. Vous avez " + bonneReponse + " bonne réponses sur " + question + " questions");
                     }
                 }
-            } 
+            }
         }
     }
 }
